@@ -35,9 +35,17 @@ export function Footer() {
             <div className="space-y-4">
                 <h3 className="text-sm font-semibold text-gray-900 dark:text-white uppercase tracking-wider">Products</h3>
                 <ul className="space-y-2">
-                    <li><Link href="/smartphones" className="text-sm text-gray-500 dark:text-zinc-500">Smartphones</Link></li>
-                    <li><Link href="/laptops" className="text-sm text-gray-500 dark:text-zinc-500">Laptops</Link></li>
-                    <li><Link href="/watches" className="text-sm text-gray-500 dark:text-zinc-500">Smartwatches</Link></li>
+                    {[
+                        { label: "Smartphones", href: "/smartphones" },
+                        { label: "Laptops", href: "/laptops" },
+                        { label: "Smartwatches", href: "/watches" },
+                    ].map((link) => (
+                        <li key={link.href}>
+                            <Link to={link.href} className="text-sm text-gray-500 dark:text-zinc-500">
+                                {link.label}
+                            </Link>
+                        </li>
+                    ))}
                 </ul>
             </div>
         </div>
