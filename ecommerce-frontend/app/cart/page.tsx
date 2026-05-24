@@ -5,7 +5,7 @@ import { useCart } from "@/contexts/CartContext";
 import { useAuth } from "@/contexts/AuthContext";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-
+import { Plus, Minus } from "lucide-react";
 
 export default function CartPage() {
   const router = useRouter();
@@ -71,7 +71,23 @@ export default function CartPage() {
                       <p className="text-gray-500 dark:text-zinc-400 text-sm mb-3">
                         ${item.product.price.toLocaleString()}
                       </p>
-                      
+
+                      <div className="flex items-center gap-2">
+                        <button onClick={() => updateQuantity(item.id, item.quantity - 1)} className="p-1 hover:bg-gray-100 dark:hover:bg-zinc-800 rounded">
+                          <Minus className="w-4 h-4" />
+                        </button>
+                        
+                        <input
+                          type="number"
+                          value={item.quantity}
+                          onChange={(e) => updateQuantity(item.id, parseInt(e.target.value))}
+                          className="w-12 text-center border border-gray-200 dark:border-zinc-800 rounded px-2 py-1 bg-white dark:bg-zinc-800"
+                        />
+                        
+                        <button onClick={() => updateQuantity(item.id, item.quantity + 1)} className="p-1 hover:bg-gray-100 dark:hover:bg-zinc-800 rounded">
+                          <Plus className="w-4 h-4" />
+                        </button>
+                      </div>
                     </div>
                   </div>
                 ))}
