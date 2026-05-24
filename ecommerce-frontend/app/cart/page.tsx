@@ -6,14 +6,24 @@ import { useAuth } from "@/contexts/AuthContext";
 import { useRouter } from "next/navigation";
 
 export default function CartPage() {
-    const router = useRouter();
+  const router = useRouter();
   const { cartItems, cartTotal, removeFromCart, updateQuantity } = useCart();
   const { user, loading: authLoading } = useAuth();
+
+  if (authLoading) {
+    return (
+      <Layout>
+        <div className="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8 py-12">
+          <p className="text-center text-gray-500 dark:text-zinc-400">Loading...</p>
+        </div>
+      </Layout>
+    );
+  }
   return (
     <Layout>
       <div className="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8 py-12">
         <h1 className="text-3xl font-bold mb-8">Shopping Cart</h1>
-        
+
       </div>
     </Layout>
   );
