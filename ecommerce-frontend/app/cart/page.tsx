@@ -104,8 +104,32 @@ export default function CartPage() {
             </div>
 
             <div className="bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 rounded-lg p-6 h-fit">
+              <h2 className="text-xl font-bold mb-6">Order Summary</h2>
+              <div className="space-y-3 mb-6 pb-6 border-b border-gray-200 dark:border-zinc-800">
+                <div className="flex justify-between text-gray-600 dark:text-zinc-400">
+                  <span>Subtotal</span>
+                  <span>${cartTotal.toLocaleString()}</span>
+                </div>
+                <div className="flex justify-between text-gray-600 dark:text-zinc-400">
+                  <span>Shipping</span>
+                  <span>Free</span>
+                </div>
+                <div className="flex justify-between text-gray-600 dark:text-zinc-400">
+                  <span>Tax</span>
+                  <span>${(cartTotal * 0.1).toLocaleString()}</span>
+                </div>
+              </div>
+              <div className="flex justify-between text-lg font-bold mb-6">
+                <span>Total</span>
+                <span>${(cartTotal * 1.1).toLocaleString()}</span>
+              </div>
+              <button
+                onClick={() => router.push("/checkout")}
+                className="w-full bg-red-600 hover:bg-red-500 text-white font-semibold py-3 rounded-lg transition-colors"
+              >
+                Proceed to Checkout
+              </button>
             </div>
-
           </div>
         )}
       </div>
