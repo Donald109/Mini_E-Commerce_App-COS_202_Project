@@ -57,6 +57,25 @@ export default function CartPage() {
             <div className="lg:col-span-2">
               <div className="space-y-4">
 
+                {cartItems.map((item) => (
+                  <div key={item.id} className="flex gap-4 bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 rounded-lg p-4">
+                    <img
+                      src={item.product.image_url}
+                      alt={item.product.name}
+                      className="w-24 h-24 object-cover rounded-lg"
+                    />
+                    <div className="flex-1">
+                      <h3 className="font-semibold text-gray-900 dark:text-white">
+                        {item.product.name}
+                      </h3>
+                      <p className="text-gray-500 dark:text-zinc-400 text-sm mb-3">
+                        ${item.product.price.toLocaleString()}
+                      </p>
+                      
+                    </div>
+                  </div>
+                ))}
+
               </div>
             </div>
 
