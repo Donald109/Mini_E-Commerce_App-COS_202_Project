@@ -8,6 +8,7 @@ import { useCart } from "@/contexts/CartContext";
 import { useAuth } from "@/contexts/AuthContext";
 import { ShippingAddress } from "@/types";
 import Link from "next/link";
+import { ArrowLeft } from "lucide-react";
 
 export default function CheckoutPage() {
   const router = useRouter();
@@ -71,6 +72,22 @@ export default function CheckoutPage() {
       <div className="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8 py-12">
         <h1 className="text-3xl font-bold mb-8">Checkout</h1>
 
+        <Link href="/cart" className="inline-flex items-center gap-2 text-red-600 hover:text-red-500 mb-8">
+          <ArrowLeft className="w-4 h-4" /> Back to Cart
+        </Link>
+
+        <h1 className="text-3xl font-bold mb-8">Checkout</h1>
+
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          {/* Checkout Form Container (Left) */}
+          <div className="lg:col-span-2">
+             <form className="space-y-6"></form>
+          </div>
+
+          {/* Order Summary Container (Right) */}
+          <div className="bg-white dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 rounded-lg p-6 h-fit">
+          </div>
+        </div>
       </div>
     </Layout>
   );
