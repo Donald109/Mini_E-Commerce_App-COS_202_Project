@@ -51,6 +51,21 @@ export default function CheckoutPage() {
     );
   }
 
+  if (cartItems.length === 0) {
+    return (
+      <Layout>
+        <div className="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8 py-12">
+          <div className="text-center">
+            <h1 className="text-2xl font-bold mb-4">Your cart is empty</h1>
+            <p className="text-gray-500 dark:text-zinc-400 mb-6">Add some items before checking out</p>
+            <Link href="/smartphones" className="inline-block bg-red-600 hover:bg-red-500 text-white font-semibold px-6 py-3 rounded-lg">
+              Continue Shopping
+            </Link>
+          </div>
+        </div>
+      </Layout>
+    );
+  }
   return (
     <Layout>
       <div className="mx-auto max-w-screen-2xl px-4 sm:px-6 lg:px-8 py-12">
