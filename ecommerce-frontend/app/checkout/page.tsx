@@ -79,7 +79,28 @@ export default function CheckoutPage() {
         <h1 className="text-3xl font-bold mb-8">Checkout</h1>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {/* Checkout Form Container (Left) */}
+              <div>
+                <h2 className="text-xl font-bold mb-4">Shipping Address</h2>
+                <div className="space-y-4">
+                  {/* Map these standard inputs out for Full Name, Email, Address, and Country */}
+                  <div>
+                    <label className="block text-sm font-medium mb-1">Full Name</label>
+                    <input type="text" required className="w-full px-4 py-2 border rounded-lg bg-white dark:bg-zinc-800" />
+                  </div>
+                  
+                  {/* Grid for City and Postal Code */}
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-medium mb-1">City</label>
+                      <input type="text" required className="w-full px-4 py-2 border rounded-lg bg-white dark:bg-zinc-800" />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium mb-1">Postal Code</label>
+                      <input type="text" required className="w-full px-4 py-2 border rounded-lg bg-white dark:bg-zinc-800" />
+                    </div>
+                  </div>
+                </div>
+              </div>
           <div className="lg:col-span-2">
              <form className="space-y-6"></form>
           </div>
