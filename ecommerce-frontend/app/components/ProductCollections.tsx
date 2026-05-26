@@ -1,9 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { Product } from "@/types";
-import { ProductCard } from "@/components/ProductCard";
-import { fetchProducts, type ProductFilters } from "@/lib/api";
+import type { Product } from "../../types";
+import { ProductCard } from "./ProductCard";
+import { fetchProducts, type ProductFilters } from "../../lib/api";
 
 type ProductCollectionProps = {
 	title: string;
