@@ -12,7 +12,8 @@ Low-Fidelity (Lo-Fi) Wireframes: The design process began with structural, black
 <img width="1600" height="856" alt="57a2b7cb-cf8c-4f4c-b343-508471c0f612" src="https://github.com/user-attachments/assets/9b9f6b04-8c5a-4564-8188-22c1e4a8b09c" />
 
 
-High-Fidelity (Hi-Fi) Prototypes: Once the basic structure was locked, it was transformed into an interactive, high-fidelity digital mock-up using Figma. This stage introduced the actual system branding, typography, color palettes, and real product hardware imagery. The hi-fi prototype simulated working clickable elements and page transitions, serving as an exact visual contract for the frontend engineers to follow during development.
+High-Fidelity (Hi-Fi) Prototypes: Once the basic structure was locked, it was transformed into an interactive, high-fidelity digital mock-up using Figma. This stage introduced the actual system branding, typography, color palettes, and real product hardware imagery. The hi-fi prototype simulated working clickable elements and page transitions, serving as an exact visual contract for the frontend engineers to follow during development. The high fidelity design for this project was rather simplified which is why it doesnt look exactly like the low fidelity design.
+<img width="1600" height="859" alt="8b9eefbf-5db1-40a5-b80e-66305c200725" src="https://github.com/user-attachments/assets/bef6db63-c685-45ca-b810-7c421a280dfa" />
 
 🏗️ Architectural Overview
 
