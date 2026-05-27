@@ -5,7 +5,7 @@ This project is a full-stack digital marketplace designed to simulate a modern e
 The primary objective of this project is twofold: first, to engineer a responsive, database-driven web application; and second, to practice modern, industry-standard collaborative engineering workflows using decentralized version control, interactive UI/UX prototyping, and cloud infrastructure.
 
 🎨 The Design Phase (UI/UX Foundation)
-
+ 
 Before a single line of code was written for T3chWorld, the platform underwent a rigorous user experience design cycle to map out the customer journey and screen layouts. This phase was divided into two distinct engineering steps:
 
 Low-Fidelity (Lo-Fi) Wireframes: The design process began with structural, black-and-white layouts. These wireframes focused entirely on page blueprints—mapping out where the navigation bar, product catalog grid, and filter sidebar should sit. By stripping away colors, logos, and images, the team was able to finalize user navigation paths and button placements without visual distractions.
